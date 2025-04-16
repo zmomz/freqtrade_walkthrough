@@ -2,7 +2,7 @@
 
 ---
 
-### 📌 **Step 1: Initial Server Setup & Security**
+###  **Step 1: Initial Server Setup & Security**
 
 ####  Create a Non-Root User
 ```bash
