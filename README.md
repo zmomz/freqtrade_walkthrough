@@ -6,9 +6,9 @@
 
 ####  Create a Non-Root User
 ```bash
-sudo adduser dcd
-sudo usermod -aG sudo dcd
-su - dcd
+sudo adduser username
+sudo usermod -aG sudo username
+su - username
 ```
 
 ####  Disable Root Access
@@ -37,7 +37,7 @@ sudo dpkg-reconfigure --priority=low unattended-upgrades
 From your **local machine**:
 ```bash
 ssh-keygen -b 4096
-ssh-copy-id dcd@your_server_ip -p 22
+ssh-copy-id username@your_server_ip -p 22
 ```
 
 On your **server**:
@@ -47,7 +47,7 @@ sudo nano /etc/ssh/sshd_config
 Port 1970
 PermitRootLogin no
 PasswordAuthentication no
-AllowUsers dcd
+AllowUsers username
 ```
 
 ```bash
@@ -259,7 +259,7 @@ After=docker.service
 [Service]
 Type=oneshot
 RemainAfterExit=true
-WorkingDirectory=/home/dcd/ft_userdata
+WorkingDirectory=/home/username/ft_userdata
 ExecStart=/usr/local/bin/docker-compose up -d
 ExecStop=/usr/local/bin/docker-compose down
 
