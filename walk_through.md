@@ -274,5 +274,3 @@ sudo systemctl start freqtrade_docker
 ```
 
 ---
-
-Let me know if you'd like this exported as a PDF or markdown file.
